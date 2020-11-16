@@ -1,8 +1,10 @@
 let express = require('express');
 let app = express();
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-  res.send('This is the home page.');
+  res.render('index.ejs');
 });
 
 app.listen(8000, () => console.log('The server is up and running!'));
